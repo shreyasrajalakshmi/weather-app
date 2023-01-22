@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather🌦App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/853dbe43c5.js" crossorigin="anonymous"></script>
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    
+<div class="card-containers">
+        <div class="row mt-5">
+            <div class="col-4"> </div>
+            <div id="Dclock" class="col-4 mt-5 border p-5 text-center text-danger fs-1"></div>
+        </div> 
+        <div class="col-4"></div>   
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="card-container">
+       <div> <p class="weatherQuotes">"The best thing about the weather is that it changes"</p></div>
+        <div class="search">
+            <input class="search-bar" type="text" placeholder="Search for your location">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+       
+    </div>
+    <div class="card-container">
+        <div class="weather">
+            <h1 class="city"></h1>
+            <div class="temp"></div>
+            <div class="flex">
+                <img src="" alt="" class="icon">
+                <div class="description"></div>
+            </div>
+            <div class="humidity"></div>
+            <div class="wind"></div>
+        </div>
+    </div>
+</body>
+<script>
+    let clock =()=>{
+        let date =new Date()
+        let hrs =date.getHours()
+        let mins = date.getMinutes()
+        let sec = date.getSeconds()
+        let time = `${hrs} :${mins}: ${sec}`
+        Dclock.innerHTML =time
+        setTimeout(clock,1000)
+
+
+    }
+    clock()
+</script>
+</html>
